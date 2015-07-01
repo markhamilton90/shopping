@@ -1,0 +1,22 @@
+$('document').ready( function() {
+
+	$('input').on('keypress', function(event) {
+		if (event.which == 13) {
+			if ($('input').val() != 0) {
+				var text = $('input').val();
+				$('ul').prepend('<div class="checkbox"><span class="fa fa-check"></span></div>' + '<li>' + text + '</li>');
+				$('input').val('');
+			};
+		};
+	});
+
+	$('ul').on('click', '.checkbox', function() {
+		$(this).hide();
+		$(this).next('li').css({'text-decoration': 'line-through', 'border': '2px solid #5d6d5d',
+				'color': '#5d6d5d', 'background-color': '#f5f5f5'})
+	});
+
+	$('#clear-all').on('click', function() {
+		$('ul').empty();
+	});
+});
