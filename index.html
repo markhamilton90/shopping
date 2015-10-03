@@ -5,6 +5,7 @@
 	<title>Shopping List</title>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="assets/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="shopping.js"></script>
 </head>
@@ -18,12 +19,16 @@
 		<section class="user-controls">
 			<button id="clear-all">Clear All</button>
 			<input type="text" id="user-input" placeholder="Type anything" 
-			maxlength="46">
+			maxlength="46" autofocus>
 			<ul>
-				<div class="checkbox"><span class="fa fa-check"></span></div>
-				<li>Vodka</li>
-				<div class="checkbox"><span class="fa fa-check"></span></div>
-				<li>Tequila</li>
+			  <div class="entry vis">
+				  <div class="checkbox visible"><span class="fa fa-check"></span></div>
+				  <li class="visible">Vodka</li>
+				</div>
+				<div class="entry vis">
+				  <div class="checkbox visible"><span class="fa fa-check"></span></div>
+				  <li class="visible">Tequila</li>
+				<div>
 			</ul>
 		</section>
 	</div>

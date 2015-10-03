@@ -1,11 +1,22 @@
 $('document').ready( function() {
+	var $input = $('input');
 
-	$('input').on('keypress', function(event) {
-		if (event.which == 13) {
-			if ($('input').val() != 0) {
-				var text = $('input').val();
-				$('ul').prepend('<div class="checkbox"><span class="fa fa-check"></span></div>' + '<li>' + text + '</li>');
-				$('input').val('');
+	$input.on('keypress', function(e) {
+		if (e.which == 13) {
+			if ($input.val() != 0) {
+				var text = $input.val();
+				$('ul').prepend('<div class="entry"><div class="checkbox"><span class="fa fa-check"></span></div>' + 
+						'<li>' + text + '</li></div>');
+				$('.entry').
+					animate({
+					opacity: 1,
+					height: "show",
+					padding: "show",
+					margin: "show",
+					top: "+10px"
+					}, 400, function(){});
+					
+				$input.val('');
 			};
 		};
 	});
