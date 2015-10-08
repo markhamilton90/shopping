@@ -529,12 +529,6 @@ h1:last-child {
   text-align: center;
 }
 
-/*
-.user-controls ul li:first-child {
-  border: 2px dashed #ff3a26;
-}
-*/
-
 .user-controls ul li {
   border: 2px solid #2ebd59;
   background-color: #2ebd59;
